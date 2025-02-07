@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it"><head>
+    <link rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spiegazione codice</title>
+    <link rel="icon" type="image/x-icon" href="https://i.imgur.com/mOEvTDS.png">
+    </head><body><h1>Come ho programmato questo sito</h1>
+      <h3 id="demo" style="font-family:'Courier New', Courier, monospace;">
+              
+      Per sviluppare questo sito ho usato un programma della Microsoft: Visual Studio Code. Grazie a questo programma si può usare qualsiasi codice come il <a href="https://madushaprasad21.medium.com/what-is-batch-language-bbdd4ee9b627#:~:text=Aug%2010%2C%202023-,Batch%20is%20a%20programming%20language.,bat%20or%20*." target="_blank">Batch</a>, <a href="https://w3schools.com/" target="_blank" alt="sito che insegna vari linguaggi di programmazione">l' HTML(HyperText Markup Language), il CSS(Cascading Style Sheets)</a> e molti altri. Ho nominato proprio questi tre linguaggi perchè sono quelli di cui me ne intendo di più e perchè gli ultimi due nominati sono quelli che ho utilizzato per programmare questo sito.
+    <hr>
+    Entrando ancora più all'interno del discorso, vorrei spiegare la funzione di ogni stringa di questa pagina. Cominciando dal titolo della pagina, per scriverci qualsiasi cosa bisogna usare i tag. Il tag di apertura <code>&lt;title&gt;</code> serve a scrivere il titolo della pagina, poi, va chiuso il tag con <code>&lt;/title&gt;</code> una volta salvato il file, per vedere il risultato, basta ricaricare la pagina. Per far apparire le scritte con questo font, bisogna scrivere <code>&lt;h3 style="font-family:'Courier New', Courier, monospace;"&gt;</code>, aggiungere il testo e chiudere con <code>&lt;/h3&gt;</code>. Per il colore, ho usato direttamente il CSS perchè mi è servito anche per centrare sullo schermo le scritte, quindi il codice è: <br> <code>h3{ <br>
+        color: rgb(4, 144, 35);<br>
+        text-align: justify;<br>
+        margin-left:10%;<br>
+        margin-right:10%;<br>
+    }</code><br> e così ho centrato le scritte e le ho dato il tipico colore di un terminale nei film. Per fare queste righe bianche che separano i vari paragrafi, ho usato <code>&lt;hr&gt;</code>. Quindi, passando allo sfondo, il codice HTML che ho utilizzato è molto semplice, che sarebbe semplicemente il tag: <code>&lt;body&gt;</code><code>&lt;/body&gt;</code> e la parte del codice CSS che indica il colore:<br> <code>body{ <br>background-color: rgb(26, 26, 26);<br>}<br></code>
+    Ora manca solo la scritta che continua a muoversi in fondo alla pagina, bene, il codice non è molto complicato perchè si tratta di un'altro tag e un attributo all'interno, quindi per farla, ho scritto: <code>&lt;marquee behaviuor="alternate"&gt;Torna alla pagina iniziale &lt;/marquee&gt;</code>. Il senso di questa scritta, è quello di tornare alla pagina iniziale, perciò al computer serve dire che questa scritta è in link, per farlo basta scrivere:<code>&lt;a href="https://github.com/Istituto-Freud-Motisa/sito.git"&gt;&lt;/a&gt;</code><br>Adesso, il codice di questa pagina è finito, non è stato difficile, il problema, è pubblicarlo, i servizi di pubblicazione dei siti, non sono mai gratuiti, perciò, per farlo, mi sono dovuto "arrangiare" con un link che portasse ad una pagina comune per tutti gli utenti, che permetta di installare sul prorio pc il file e aprirlo. Per poterlo fare, ho usato <a href="https://github.com/" target="_blank">GitHub</a>, dove lo sviluppatore deve caricare i file e renderli accessibili a tutti tramite un link.
+    </h3>
+
+    <a href="https://github.com/Istituto-Freud-Motisa/sito.git" target="_blank"><marquee behaviuor="alternate"><h4>Torna alla pagina iniziale</h4></marquee></a>
+    <style>
+        body{
+            background-color: rgb(26, 26, 26);
+        }
+        h1{
+            font-size: 60px;
+            color: rgb(4, 144, 35);
+            text-transform: uppercase;
+            text-decoration:underline overline;
+            margin-left: 13%;
+            margin-right: 19%;
+        }
+        h1:hover{
+            transition: 0.5s;
+            transform: scale(1.1);
+            margin-right: 19%;
+            border: 7px double rgb(4, 144, 35);
+            padding: 3px;
+        }
+        h2{
+            color: rgb(4, 144, 35);
+            text-align:justify;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        h3{
+            color: rgb(4, 144, 35);
+            text-align:justify;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        a{
+            color: rgb(4, 144, 35);
+            text-align: end;
+        }
+        a:hover{
+            transition:2s;
+            color: rgb(28, 212, 225);
+        }
+        h4:hover{
+            transition: 0.5s;
+            transform: scale(1.1);
+            color: rgba(4, 144, 34, 0.755);
+        }
+        button{
+            background-color: rgb(4, 144, 35);
+            color: black;
+            border: 7px double rgb(4, 144, 35);
+            
+        }
+        button:hover{
+            background-color: rgba(4, 144, 34, 0.755);
+            border: 7px dotted rgb(4, 144, 35)
+        }
+        .Id:hover{
+            color: red;
+        }
+        .h1{
+            font-size: 60px;
+            color: rgb(4, 144, 35);
+            text-transform: uppercase;
+            text-decoration:underline overline;
+        }
+    </style>
+    <button onclick="myFunc()">cambia testo</button>
+    <script>
+        function myFunc() {
+            document.getElementById('demo').innerHTML = "Vorrei parlare ora dei comandi del linguaggio Javascript che ho usato per comporre questo secondo testo, per fare il bottone in basso a sinistra, è servito solo l'HTML scrivendo:&lt;button onclick='myFunc()'&gt;cambia testo&lt;/button&gt;, significa che quando viene cliccato il bottone, viene eseguita una determinata azione di nome 'myFunc(), questa azione è scritta in Javascript, per far apparire questo testo, ho composto questo codice:<br> function myFunc(){<br>document.getElementById('demo').innerHTML = 'testo';<br>}.<br>Ho voluto parlare del codice di questa pagina perchè mi ha ispirato il sito https://www.w3schools.com/"
+        }
+    </script>
+    <h1 class="h_1"><a href="https://www.w3schools.com/" target="_blank">Prova tu:</a></h1>
+</body></html>
